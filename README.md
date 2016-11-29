@@ -1,5 +1,6 @@
 # Ng-LocalStorage
 [![version](https://img.shields.io/npm/v/ng-localstorage.svg?style=flat-square)](http://npm.im/ng-localstorage) [![downloads](https://img.shields.io/npm/dm/ng-localstorage.svg?style=flat-square)](https://npm-stat.com/charts.html?package=ng-localstorage&from=2016-11-24) [![MIT License](https://img.shields.io/npm/l/ng-localstorage.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+
 A local storage wrapper to simplify local storage setters and getters
  
 ### Installation ###
