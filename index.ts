@@ -1,0 +1,1 @@
+export { NgLocalStorage } from './src/ng-localstorage';
