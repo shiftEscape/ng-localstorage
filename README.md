@@ -6,15 +6,19 @@
 npm install --save ng-localstorage
 ```
 ### Usage ###
-```sh
+```javascript
 import { NgLocalStorage } from 'ng-localstorage';   
 ```
-
-And inject the service to the constructor:
+And inject the `service` to the constructor:
 ```javascript
 constructor (private NgLocalStorage: NgLocalStorage) { ...
 ```
-And you can use all localStorage APIs: **set**, **get**, **remove**, **clear**
+
+Lastly, don't forget to declare it into your `app.module` or in the `providers` section of your component.
+```javascript
+providers: [ NgLocalStorage ]
+```
+And you can use all localStorage APIs: **set**, **get**, **remove**, **clear**.
 
 ### Store Object
 **ng-localstorage** automatically converts `Object` input to `JSON` string and save it.
@@ -32,8 +36,8 @@ NgLocalStorage.get('user.name'); // returns 'John Doe'
 ```
 
 ### Clearing localStorage
-Same as native `localStorage` approach.
+Same as native `localStorage` API approach.
 ```javascript
-NgLocalStorage.remove('user');
-NgLocalStorage.clear();
+NgLocalStorage.remove('user'); // removes the item `user` in the localStorage list
+NgLocalStorage.clear(); // clears localStorage
 ```
