@@ -16,8 +16,6 @@ export class NgLocalStorage {
       if(!this.__supportsLocalStorage()) {
          this.hasStorageSupport = false;
          console.warn(this.noSupportMessage)
-      } else {
-         console.info(`[${this.appName}]: HTML5 localStorage supported in this Browser! :)`)
       }
    }
 
