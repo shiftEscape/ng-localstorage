@@ -11,7 +11,7 @@ import { NgLocalStorage } from 'ng-localstorage';
 ```
 And inject the `service` to the constructor:
 ```javascript
-constructor (private NgLocalStorage: NgLocalStorage) { ...
+constructor (private storage: NgLocalStorage) { ...
 ```
 
 Lastly, don't forget to declare it into your `app.module` or in the `providers` section of your component.
@@ -23,21 +23,21 @@ And you can use all localStorage APIs: **set**, **get**, **remove**, **clear**.
 ### Store Object
 **ng-localstorage** automatically converts `Object` input to `JSON` string and save it.
 ```javascript
-var userData = {name: 'John Doe', email: 'johndoe@mail.com'};
-NgLocalStorage.set('user', userData);
+var userData = { name: 'John Doe', email: 'johndoe@mail.com' };
+this.storage.set('user', userData);
 ```
 
 ### Get Object
 **ng-localstorage** allows you to retrieve saved items in `Object` format, which means you can use a `dot-notation` approach to access `Object` properties.
 ```javascript
 // given that userData Object has been saved in localStorage
-NgLocalStorage.get('user'); // returns {name: 'John Doe', email: 'johndoe@mail.com'}
-NgLocalStorage.get('user.name'); // returns 'John Doe'
+this.storage.get('user'); // returns {name: 'John Doe', email: 'johndoe@mail.com'}
+this.storage.get('user.name'); // returns 'John Doe'
 ```
 
 ### Clearing localStorage
 Same as native `localStorage` API approach.
 ```javascript
-NgLocalStorage.remove('user'); // removes the item `user` in the localStorage list
-NgLocalStorage.clear(); // clears localStorage
+this.storage.remove('user'); // removes the item `user` in the localStorage list
+this.storage.clear(); // clears localStorage
 ```
